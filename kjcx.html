@@ -1,0 +1,904 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>科技创新</title>
+<style>
+*{ margin:0; padding:0;}
+li{ list-style:none;}
+img{ border:none;vertical-align:top;}
+a{ text-decoration:none;}
+.clear{zoom:1}
+.clear:after{ content:""; display:block; clear:both;}
+/* header start */
+#header{ 
+	 width:100%; 
+	 height:80px; 
+	 min-width:1000px; 
+	 background:rgba(255,255,255,0.7);
+	 position:absolute;
+	 top:0;
+	 left:0;
+	 z-index:99;
+	 font-family:"Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,"Hiragino Sans GB","Microsoft YaHei",sans-serif;
+	 color:#333;
+	 font-size:14px;
+}
+#header #headerContent{
+	 height:100%; 
+	 width:1000px; 
+	 margin:0 auto;
+}
+#header #headerContent #logo{
+	 width:320px; 
+	 height:100%; 
+	 background:url(img/aLogoBg.png) no-repeat; 
+	 float:left;
+}
+#header #headerContent #logo a{
+	 display:block; 
+	 width:100%; 
+	 height:100%;
+}
+#header #headerContent #nav{
+	 width:560px; 
+	 height:100%; 
+	 float:right;
+}
+#headerContent #nav ul{
+	 height:100%;
+}
+#headerContent #nav ul li{
+	 width:80px; 
+	 height:100%;
+	 float:left;
+}
+#headerContent #nav ul li a{
+	 width:50px; 
+	 height:50px;
+	 display:block; 
+	 margin-top:12px; 
+	 background:url(img/aNavBg.png) no-repeat;
+	 transition:all 400ms ease 0s;
+}
+#headerContent #nav ul li:nth-of-type(1) a{ 
+	 background-position: -5px -10px;
+}
+#headerContent #nav ul li:nth-of-type(1) a:hover{ 
+	 background-position: -5px -80px;
+}
+#headerContent #nav ul li:nth-of-type(2) a{ 
+	 background-position: -65px -10px;
+}
+#headerContent #nav ul li:nth-of-type(2) a:hover{ 
+	 background-position: -65px -80px;
+}
+#headerContent #nav ul li:nth-of-type(3) a{ 
+	 background-position: -125px -10px;
+}
+#headerContent #nav ul li:nth-of-type(3) a:hover{ 
+	 background-position: -125px -80px;
+}
+#headerContent #nav ul li:nth-of-type(4) a{ 
+	 background-position: -185px -10px;
+}
+#headerContent #nav ul li:nth-of-type(4) a:hover{ 
+	 background-position: -185px -80px;
+}
+#headerContent #nav ul li:nth-of-type(5) a{ 
+	 background-position: -245px -10px;
+}
+#headerContent #nav ul li:nth-of-type(5) a:hover{ 
+	 background-position: -245px -80px;
+}
+#headerContent #nav ul li:nth-of-type(6) a{ 
+	 background-position: -305px -10px;
+}
+#headerContent #nav ul li:nth-of-type(6) a:hover{ 
+	 background-position: -305px -80px;
+}
+#headerContent #nav ul li:nth-of-type(7) a{ 
+	 width:100%;
+	 height:100%;
+	 margin:0;
+	 background:url(img/downBg.png) no-repeat;
+}
+
+#headerContent #nav ul li:nth-of-type(7):hover{
+	 background:#f9f9f9;
+}
+#headerContent #nav ul li:nth-of-type(7):hover .down{ 
+	 transform:rotate(180deg);
+}
+#headerContent #nav #submenu{
+	 position:relative;
+}
+#headerContent #nav #navList{
+	 width:1000px; 
+	 height:260px;
+	 position:absolute;
+	 right:0;
+	 top:80px;
+	 background:#f9f9f9;
+	 display:none;
+	 opacity:0;
+	 z-index:99;
+}
+#headerContent #nav #navList div{
+	 width:25%; 
+	 height:100%;
+	 float:left;
+	 overflow:hidden;
+	 transition:all 0.2s ease 0s;
+}
+
+#headerContent #nav #navList:hover div{
+	 width:23%;
+}
+#headerContent #nav #navList div:hover{
+	 width:31%; 
+}
+#headerContent #nav #navList div:nth-of-type(1){
+	 background:#f1f1f1;
+}
+#headerContent #nav #navList div:nth-of-type(3){
+	 background:#f1f1f1;
+}
+#headerContent #nav #navList a{
+	 background:none;
+	 font-weight:normal;
+}
+#headerContent #nav #navList h3{
+	 width:100%;
+	 height:20px;
+	 padding:10px 0;
+	 border-bottom:1px dashed #ccc;
+	 font-size:16px;
+	 margin-bottom:5px;
+	 color:#08c;
+	 text-align:center;
+}
+#headerContent #nav #navList h3 a{
+	 color:#08c;
+}
+#headerContent #nav #navList li{
+	 width:50%;
+	 height:auto;
+	 margin-bottom:3px;	 
+}
+#headerContent #nav #navList li:hover{
+	 background:none;
+}
+#headerContent #nav #navList li a{
+	 width:100px;
+	 line-height:19px;
+	 display:block;
+	 padding:4px 0;
+	 text-align:center;
+	 color:#777;
+	 margin:0 auto;	
+	 transform:none;
+	 border-radius:2px; 
+	 transition:all 0.4s ease 0s;
+}
+#headerContent #nav #navList li a:hover{
+	 background:rgb(0,136,204);
+	 color:#fff;
+}
+/* header end */
+/* footer start */
+#footer{
+	 width:100%;
+	 height:40px;
+	 background:#000;
+	 position:fixed;
+	 bottom:0;
+	 color:#999;
+	 font-size:12px;
+	 line-height:40px;
+	 z-index:99;
+}
+#footer #footerContent{
+	 width:1000px;
+	 height:100%;
+	 margin:0 auto;	
+}
+#footer #footerContent #footerMenu{
+	 width:60px;
+	 height:40px;
+	 background: url(img/footerMenuBg.png) no-repeat;
+	 float:left;
+	 cursor:pointer;
+}
+#footer #footerContent p{
+	 float:left;
+	 margin-left:10px;
+}
+#footer #footerContent #search{
+	 height:100%;
+	 float:right;
+	 background:#333;
+}
+#footer #footerContent #search:hover #searchText{
+	 width:150px;
+}
+#search #searchText{
+	 width:0;
+	 height:38px;
+	 padding:1px;
+	 background:#333;
+	 color:#ccc;
+	 text-align:center;
+	 float:left;
+	 border:none;
+	 out-line:none;
+	 transition:all 0.2s ease 0s;
+}
+#search #searchBT{
+	 width:60px;
+	 height:100%;
+	 background:#333;
+	 outline:none;
+	 color:#ccc;
+	 padding:0 6px;
+	 border:none;
+	 cursor:pointer;
+}
+#footer #footerContent #share{
+	 width:140px;
+	 height:100%;
+	 float:right;
+}
+#share ul{
+	 width:100%;
+	 height:100%;
+}
+#share ul li{
+	 width:25%;
+	 height:35px;
+	 float:left;
+	 position:relative;
+	 cursor:pointer;
+}
+#share ul li:nth-of-type(1){
+	 background: url(img/shareIcon1.png) no-repeat;
+}
+#share ul li:nth-of-type(2){
+	 background: url(img/shareIcon2.png) no-repeat;
+}
+#share ul li:nth-of-type(3){
+	 background: url(img/shareIcon3.png) no-repeat;
+}
+#share ul li:nth-of-type(4){
+	 background: url(img/shareIcon4.png) no-repeat;
+}
+#share #language:hover #languageList{	 
+	 height:71px;
+	 opacity:1;
+}
+#share #languageList{
+	 width:150px;
+	 height:0;
+	 font-size:12px;
+	 font-family:"宋体";
+	 position:absolute;
+	 bottom:40px;
+	 left:-59px;	 
+	 overflow:hidden;
+	 box-shadow: 0 0 4px 0 rgba(0,0,0,0.4);
+	 transition:all 0.3s ease 0s;
+	 opacity:0;
+}
+#share #languageList a{
+	 color:#08c;
+}
+#share #languageList a:hover{
+	 background:#08c;
+	 color:#fff;
+}
+#share #languageList #LanListTop{
+	 width:100%;
+	 height:30px;
+	 background:#fff;
+	 border-bottom:1px dashed #08c;
+}
+#share #languageList #LanListTop a{
+	 float:left;
+	 line-height:30px;
+	 text-align:center;
+	 display:block;
+	 width:50%;
+	 height:100%;
+	 
+}
+#share #languageList #LanListBot{
+	 width:100%;
+	 height:30px;
+	 background:#fff;
+}
+#share #languageList #LanListBot a{
+	 line-height:30px;
+	 text-align:center;
+	 display:block;
+	 height:100%;
+}
+#share #languageList span{
+	 display:block;
+	 background:url(img/languageIcon.png) center 0	 no-repeat;
+	 width:100%;
+	 height:10px;
+}
+#share #weixin:hover #app{
+	 height:160px;
+	 opacity:1;
+}
+#share #weixin #app{
+	 width:150px;
+	 height:0;
+	 opacity:0;
+	 left:-59px;
+	 position:absolute;
+	 bottom:40px;
+	 box-shadow: -2px -2px 2px 0 rgba(0,0,0,0.4);
+	 background:url(img/appBg.png) no-repeat;
+	 transition:all 0.3s ease 0s;
+	 overflow:hidden;
+}
+#share #weixin span{
+	 display:block;
+	 background:url(img/languageIcon.png) center 0	 no-repeat;
+	 width:100%;
+	 height:10px;
+	 margin-top:150px;
+}
+#footer #bgFrom{
+	 position:absolute;
+	 right:20px;
+	 top:0px;
+}
+#footer #bgFrom a{
+	 color:#999;
+	 font-size:12px;
+}
+#footer #bgFrom a:hover{
+	 color:#08c;
+}
+#footer #footerMes{
+	 position:absolute;
+	 bottom:40px;
+	 width:100%;
+	 height:0;
+	 background:#333;	
+	 overflow:hidden;
+}
+#footer #footerMes a:hover{
+	 color:#08c;
+}
+#footer #footerMes #mesContent{
+	 width:1000px;
+	 height:100%;
+	 margin:0 auto;
+	 position:relative;
+}
+#mesContent #mesLogo{
+	 width:25%;
+	 height:100%;
+	 background: url(img/mesLogoBg.png) 50px 10px no-repeat;
+	 float:left;
+}
+#mesContent #mesLinks{
+	 width:25%;
+	 height:77px;
+	 padding-top:15px;
+	 float:left;
+}
+#mesLinks h3{
+	 font-size:16px;
+	 color:#08c;
+	 height:18px;
+	 line-height:16px;
+	 font-weight:bold;
+	 margin-bottom:5px;
+}
+#mesLinks ul{
+	 width:100%;
+}
+#mesLinks ul li{
+	line-height:18px;
+	 width:50%;
+	 height:18px;
+	 float:left;
+}
+#mesLinks ul li a{
+	 line-height:18px;
+	 color:#999;
+	 font-size:13px;
+}
+#messages,#staff{
+	 width:25%;
+	 height:72px;
+	 padding-top:15px;
+	 float:left;
+}
+#messages li{
+	 width:100%;
+	 height:18px;
+	 line-height:18px;
+	 font-size:13px;
+}
+#staff li{
+	 width:100%;
+	 height:18px;
+	 line-height:18px;
+	 font-size:13px;
+}
+#staff li a{
+	 color:#999;
+}
+/* footer end */
+
+#b2Background{ width:100%; min-height:100%; position:fixed; z-index:-10;}
+#b2Artical{ height:100%; width:1000px; padding-top:210px; margin:0 auto;}
+#b2Artical .b2Left{ height:335px; width:200px; background:#fff; padding-top:20px; overflow: hidden; box-shadow:0 0 10px #000; float:left;}
+#b2Artical .b2Left h2{ height:30px; width:95px; background:url(img/arrow.png) no-repeat; border-radius:0 4px 4px 0; line-height:30px; font-size:16px; color:#0088cc; padding-left:105px;}
+#b2Artical .b2Left ul{ padding:20px 0 20px 20px;}
+#b2Artical .b2Left ul li{ line-height:15px; font-size:14px;}
+#b2Artical .b2Left ul li a{ display: block; margin-bottom:15px; padding-left:10px; color:#333333;}
+#b2Artical .b2Left ul li a:hover{ font-weight:bold; color:#08c; border-left:3px solid #08c; transition:0.2s;}
+
+#b2Artical .b2Right{ width:750px; box-shadow:0 0 10px #000; float:right; line-height:25px; padding:20px 20px 100px 20px; background:white; position:relative; overflow:hidden;}
+#b2Artical .b2Right h2{ font-size:16px; color:#0088cc;}
+#b2Artical .b2Right .b2RightDiv{height:300px; width:790px;margin-bottom:25px; margin-left:-20px;}
+#b2Artical .b2Right .b2RightDiv ul{height:300px; width:3000px; position:absolute;}
+#b2Artical .b2Right .b2RightDiv li{ float:left;}
+#b2Artical .b2Right .b2RightDiv .b2Bottom{ width:790px; height:25px; background:black; opacity:0.5; position:absolute; top:320px;}
+#b2Artical .b2Right .b2RightDiv .b2Bottom .b2BottomUl{ position:absolute; top:8px; left:350px;}
+#b2Artical .b2Right .b2RightDiv .b2Bottom .b2BottomUl li{ float:left; height:10px; width:25px; margin-left:5px; background:white; opacity:0.5;}
+#b2Artical .b2Right .b2RightDiv .b2Bottom .b2BottomUl .b2Active{ background:#09F;}
+#b2Artical .b2Right .b2RightDiv .b2TopL{ height:100px; width:45px; background:url(img/twoArrow.png) no-repeat; position:absolute; top:135px; left:-45px; opacity:0.2;}
+#b2Artical .b2Right .b2RightDiv .b2TopR{ height:100px; width:45px; background:url(img/twoArrow.png) no-repeat -55px 0; z-index:3; position:absolute; top:135px; left:790px; opacity:0.2;}
+
+#b2Artical .b2Right .b2RightUl li{ margin-bottom:20px; position:relative;}
+#b2Artical .b2Right .b2RightUl li img{}
+#b2Artical .b2Right .b2RightUl li div{ float:right; width:430px; font-size:14px; color:#333333;}
+#b2Artical .b2Right .b2RightUl li a{ position:absolute; background:#3498db; border-radius:2px; padding:3px 10px; bottom:0; right:0; font-size:12px; color:white;}
+</style>
+
+<script src="move.js"></script>
+</head>
+
+<body>
+<!-- header start -->
+<div id="header">
+	<div id="headerContent">
+    	<div id="logo" class="clear">
+        	<a href="index.html"></a>
+        </div>
+        <div id="nav">
+        	<ul class="clear">
+            	<li>
+                	<a href="gk.html"></a>
+                </li>
+                <li>
+                	<a href="yx.html"></a>
+                </li>
+                <li>
+                	<a href="rcpy.html"></a>
+                </li>
+                <li>
+                	<a href="zs.html"></a>
+                </li>
+                <li>
+                	<a href="kjcx.html"></a>
+                </li>
+                <li>
+                	<a href="xysh.html"></a>
+                </li>
+                <li id="submenu">
+                	<a href="#" class="down"></a>
+                    <div id="navList">
+                    	<div>
+                        	<h3><a href="#">学校概况</a></h3>
+                            <ul>
+                            	<li>
+                                	<a href="#">学校简介</a>
+                                </li>
+                                <li>
+                                	<a href="#">董事长寄语</a>
+                                </li>
+                                <li>
+                                	<a href="#">校长寄语</a>
+                                </li>
+                                <li>
+                                	<a href="#">学校章程</a>
+                                </li>
+                                <li>
+                                	<a href="#">理念特色</a>
+                                </li>
+                                <li>
+                                	<a href="#">大学精神</a>
+                                </li>
+                                <li>
+                                	<a href="#">领导关怀</a>
+                                </li>
+                                <li>
+                                	<a href="#">发展历程</a>
+                                </li>
+                                <li>
+                                	<a href="#">大事记</a>
+                                </li>
+                                <li>
+                                	<a href="#">学校形象片</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                        	<h3><a href="#">院系</a></h3>
+                            <ul>
+                            	<li>
+                                	<a href="#">计算机科学与技术系</a>
+                                </li>
+                                <li>
+                                	<a href="#">软件工程系</a>
+                                </li>
+                                <li>
+                                	<a href="#">信息管理系</a>
+                                </li>
+                                <li>
+                                	<a href="#">商务管理系</a>
+                                </li>
+                                <li>
+                                	<a href="#">电子工程系</a>
+                                </li>
+                                <li>
+                                	<a href="#">数字艺术系</a>
+                                </li>
+                                <li>
+                                	<a href="#">英语系</a>
+                                </li>
+                                <li>
+                                	<a href="#">日语系</a>
+                                </li>
+                                <li>
+                                	<a href="#">俄语系</a>
+                                </li>
+                                <li>
+                                	<a href="#">研究生部</a>
+                                </li>
+                                <li>
+                                	<a href="#">国际教育学院</a>
+                                </li>
+                                <li>
+                                	<a href="#">继续教育学院</a>
+                                </li>
+                                <li>
+                                	<a href="#">创新创业学院</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                        	<h3><a href="#">人才培养</a></h3>
+                            <ul>
+                            	<li>
+                                	<a href="#">本专科教育</a>
+                                </li>
+                                <li>
+                                	<a href="#">研究生教育</a>
+                                </li>
+                                <li>
+                                	<a href="#">国际教育</a>
+                                </li>
+                                <li>
+                                	<a href="#">教学资源</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                        	<h3><a href="#">招生就业</a></h3>
+                            <ul>
+                            	<li>
+                                	<a href="#">本专科招生</a>
+                                </li>
+                                <li>
+                                	<a href="#">研究生招生</a>
+                                </li>
+                                <li>
+                                	<a href="#">留学生招生</a>
+                                </li>
+                                <li>
+                                	<a href="#">成人本科招生</a>
+                                </li>
+                                <li>
+                                	<a href="#">就业</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>	
+</div>
+<!-- header end -->
+<!-- footer start -->
+<div id="footer">
+	<div id="footerMes">
+    	<div id="mesContent">
+        	<div id="mesLogo"></div>
+        	<div id="mesLinks">
+            	<h3>友情链接</h3>
+                <ul>
+                	<li><a href="#">东软集团</a></li>
+                    <li><a href="#">成都东软学院</a></li>
+                    <li><a href="#">广东东软学院</a></li>
+                    <li><a href="#">东软电子出版社</a></li>
+                    <li><a href="#">追光传媒有限公司</a></li>
+                    <li><a href="#">睿创网</a></li>
+                </ul>
+            </div>
+            <ul id="messages">
+            	<li>地址：中国-大连市软件园路8号</li>
+                <li>邮编：116023</li>
+                <li>电话：+86-411-84835000</li>
+                <li>传真：+86-411-84769999</li>         
+            </ul>
+            <ul id="staff">
+            	<li>网站策划：品牌与战略发展部</li>
+                <li>设计及技术支持：<a href="#">微光网络工作室</a></li>
+                <li>意见反馈：laiwanyun#neusoft.edu.cn</li>
+                <li>Powered by：Cmstop</li>         
+            </ul>
+        </div>
+    </div>
+	<div id="footerContent">
+    	<div id="footerMenu" class="clear"></div>
+        <p> © 2001 - 2016 Dalian Neusoft University of Information 辽ICP备15002835号-1 </p>
+        <form id="search">
+        	<input type="text" id="searchText">
+            <input type="submit" value="搜索" id="searchBT">
+        </form>
+        <div id="share">
+        	<ul>
+            	<li id="language">
+                	<div id="languageList">
+                    	<div id="LanListTop">
+                        	<a href="#">English</a>
+                        	<a href="#">日本語</a>
+                        </div>
+                        <div id="LanListBot">
+                        	<a href="">旧版官网</a>
+                        </div>
+                        <span></span>
+                    </div>
+                </li>
+                <li><a href="#"></a></li>
+                <li id="weixin">
+                	<div id="app">
+                    	<span></span>
+                    </div>
+                </li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="bgFrom">
+    	<a href="#">背景来自：</a><a href="#">吕作义</a>       
+    </div>
+</div>
+<!-- footer end -->
+
+<img id="b2Background" src="img/scImg.jpg">
+<div id="b2Artical">
+	<div class="b2Left">
+    	<h2>科技创新</h2>
+        <ul class="b2LeftUl">
+        	<li><a href="#">创新创业</a></li>
+            <li><a href="#">产学合作</a></li>
+            <li><a href="#">学术研究</a></li>
+        </ul>
+    </div>
+    <div class="b2Right">
+    	<h2>科技创新 Technologe Innovation</h2>
+        <div class="b2RightDiv">
+        	<ul class="b2RightDivUl">
+            	<li><img src="img/li1.jpg"></li>
+                <li><img src="img/li2.jpg"></li>
+                <li><img src="img/li3.jpg"></li>
+            </ul>
+            <div class="b2Bottom">
+            	<ul class="b2BottomUl">
+                	<li class="b2Active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="b2TopL"></div>
+            <div class="b2TopR"></div>
+        </div>
+        <ul class="b2RightUl">
+        	<li>
+            	<img src="img/li11.jpg">
+                <div>学校充分考虑学科发展、社会需求和学生成长需要，并根据各门课程对专业培养目标的贡献，重新设计了教学计划的结构和次序，以及课程之间的对应关系，建立了一体化课程体系。在一体化人才培养设计和实施过程中，学校将创新创业教育纳入一体化课程体系、项目体系和课内外实践活动，开设了大学生创业基础公共选修课、开展SYB创业指导课、创业实训课程等；并与学科竞赛、社团活动、SOVO虚拟公司</div>
+                <a class="more" href="#">了解更多 More</a>
+            </li>
+            <li>
+            	<img src="img/li22.jpg">
+                <div>IT产业的日新月异让我们感到振奋，更感到压力和挑战，全球化时代让我们深刻认识到IT教育比任何一个领域的人才培养更需要与时俱进。作为一所拥有产业基因的大学，自诞生之日我们就时刻充满着一种"危机感"，这种"危机感"来自于如何能够通过我们的教学让学生可以适应瞬息万变的IT时代</div>
+                <a class="more" href="#">了解更多 More</a>
+            </li>
+            <li>
+            	<img src="img/li33.jpg">
+                <div>我校与东软熙康、东软睿道教育有限公司、东软信息技术服务有限责任公司、睿道爱普有限公司均签订了产学合作框架协议；与大连理工大学、东软集团、外语教学与研究出版社等多家高校和企业签订了各系部科研团队领域内的多个横向项目	</div>
+                <a class="more" href="#">了解更多 More</a>
+            </li>  
+        </ul>
+    </div>
+</div>
+
+
+<script>
+var oB2Left = document.getElementsByClassName('b2Left')[0];
+var oB2LeftUl = document.getElementsByClassName('b2LeftUl')[0];
+var oB2LeftLi = oB2LeftUl.getElementsByTagName('li');
+
+var oB2RightDiv = document.getElementsByClassName('b2RightDiv')[0];
+var oB2RightUl = document.getElementsByClassName('b2RightDivUl')[0];
+var oB2RightLi = oB2RightUl.getElementsByTagName('li');
+var oB2BottomUl = document.getElementsByClassName('b2BottomUl')[0];
+var oB2BottomLi = oB2BottomUl.getElementsByTagName('li');
+var oB2TopL = document.getElementsByClassName('b2TopL')[0];
+var oB2TopR = document.getElementsByClassName('b2TopR')[0];
+var iNow = 0;
+var timer = null;
+
+/*for(var i=0;i<oB2LeftLi.length;i++){
+	oB2LeftLi[i].onmouseover = function(){
+	for(var i=0;i<oB2LeftLi.length;i++){}
+	startMove(this,{font-weight:bold},300)			
+};	
+}*/
+//header start
+header();
+function header(){
+	 var oSubmenu = document.getElementById('submenu');
+	 var oNavList = document.getElementById('navList');
+	 var timer = null;
+	 oSubmenu.onmouseenter = function(){
+		clearTimeout(timer);
+	 	oNavList.style.display = 'block';
+		startMove(oNavList,{opacity:1},400,'linear');
+	 };
+	 oSubmenu.onmouseleave = function(){
+		 timer = setTimeout(function(){
+		 	oNavList.style.display = 'none';
+			oNavList.style.opacity = 0;			  
+		 },300);
+	 };
+}
+//header end
+//footer start
+footer()
+function footer(){
+	var oFooterMenu = document.getElementById('footerMenu');
+	var oFooterMes = document.getElementById('footerMes');
+	var oFooter = document.getElementById('footer');
+	var MaxHeight = document.body. offsetHeight;
+	oFooterMenu.onoff = false;
+	oFooter.style.height = 0;
+	window.onscroll = function(){
+		if(getScrollY() == 0){
+			startMove(oFooter,{height:0},150,'linear')
+		}
+		else{
+			startMove(oFooter,{height:40},150,'linear')
+		}
+	};
+
+	
+	oFooterMenu.onclick = function(){
+		if(!oFooterMenu.onoff){
+			startMove(oFooterMes,{height:100},200,'linear');
+			oFooterMenu.onoff = true;
+		}
+		else{
+			startMove(oFooterMes,{height:0},200,'linear');
+			oFooterMenu.onoff = false;
+		}
+		
+	};
+	function getScrollY(){
+		return document.documentElement.scrollTop || document.body.scrollTop;
+	}
+	function viewHeight(){
+		return window.innerHeight || document.documentElement.clientHeight;
+	}
+}
+//footer End
+
+
+for(var i=0;i<oB2BottomLi.length;i++){
+	oB2BottomLi[i].index = i;
+	oB2BottomLi[i].onmouseover = function(){
+		for(var i=0;i<oB2BottomLi.length;i++){
+			oB2BottomLi[i].className = '';
+		}
+		this.className = 'b2Active';
+		startMove(oB2RightUl,{left:-790*this.index},300,'linear');
+		iNow = this.index;
+	};
+	
+}
+
+oB2RightDiv.onmouseenter = function(){
+	startMove(oB2TopL,{left:0},300,'linear')
+	startMove(oB2TopR,{left:745},300,'linear')
+
+};
+oB2RightDiv.onmouseleave = function(){
+	startMove(oB2TopL,{left:-45},300,'linear')	
+	startMove(oB2TopR,{left:790},300,'linear')
+};
+
+oB2TopL.onmouseenter = function(){
+	startMove(this,{opacity:0.5},300,'linear')
+};
+oB2TopR.onmouseenter = function(){
+	startMove(this,{opacity:0.5},300,'linear')	
+};
+oB2TopL.onmouseleave = function(){
+	startMove(this,{opacity:0.2},300,'linear')	
+};
+oB2TopR.onmouseleave = function(){
+	startMove(this,{opacity:0.2},300,'linear')	
+};
+oB2TopR.onclick = function(){
+	if(iNow == 2){
+		iNow = 0	
+	}
+	else{
+		iNow++;	
+	}
+	for(var i=0;i<oB2BottomLi.length;i++){
+		oB2BottomLi[i].className = '';	
+	}
+	oB2BottomLi[iNow].className = 'b2Active';
+	startMove(oB2RightUl,{left:-790*iNow},300,'linear')	
+};
+oB2TopL.onclick = function(){
+	if(iNow == 0){
+		iNow = 2	
+	}
+	else{
+		iNow--;	
+	}
+	for(var i=0;i<oB2BottomLi.length;i++){
+		oB2BottomLi[i].className = '';	
+	}
+	oB2BottomLi[iNow].className = 'b2Active';
+	startMove(oB2RightUl,{left:-790*iNow},300,'linear')	
+};
+
+
+oB2RightDiv.onmouseover = function(){
+	clearInterval(timer);	
+}
+oB2RightDiv.onmouseout = function(){
+	timer = setInterval(change,3000);	
+}
+timer = setInterval(change,3000);
+function change(){
+	if(iNow == 2){
+		iNow = 0	
+	}
+	else{
+		iNow++;	
+	}
+	for(var i=0;i<oB2BottomLi.length;i++){
+		oB2BottomLi[i].className = '';	
+	}
+	oB2BottomLi[iNow].className = 'b2Active';
+	startMove(oB2RightUl,{left:-790*iNow},300,'linear')		
+}
+</script>
+</body>
+</html>
